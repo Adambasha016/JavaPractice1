@@ -1,29 +1,31 @@
+package org.basic.prg.code.repet.code;
+
+import java.util.Arrays;
 
 public class SelectionSort {
+	
 	public static void main(String[] args) {
-		int [] a= {4,6,5,3,8,1,9,2,9};
-		selectionSort(a);
-		System.out.print("sorted elements ---> SelectionSort { ");
-		for(int s:a) {
-			System.out.print(s+" ");
-		}
-		System.out.print("}");
+		int []s= {3,4,2,9,6,8,7,1};
+		sortSelection(s);
+		System.err.println(Arrays.toString(s));
 	}
 	
 	
 	
-public static void selectionSort(int []b) {
-	for(int i=0;i<b.length-1;i++) {
+	
+	
+	
+public static void sortSelection(int []m) {
+	for(int i=0;i<m.length-1;i++) {
 		int index=i;
-		for( int j=i+1;j<b.length;j++) {
-			if(b[j]<b[index]) {index=j;}
+		for(int j=i+1;j<m.length;j++) {
+			if(m[j]<m[index])index=j;
 		}
 		if(i!=index) {
-			int tepm=b[i];
-			b[i]=b[index];
-		b[index]=tepm;
+			int temp=m[i];
+			m[i]=m[index];
+			m[index]=temp;
 		}
-		 
 	}
 }
 }
